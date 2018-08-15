@@ -1,0 +1,408 @@
+body {
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, Serif;
+    height: 100%;
+}
+
+.flexBannerParent {
+    display: flex;
+    flex-wrap: nowrap;
+    background-color: #ff99;
+    height: 120px;
+}
+
+.flexBannerChild {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+#orgName {
+    color: #034f84;
+    font-size: 22px;
+    font-weight: bold;
+    padding: 0px 3px 0px 10px;
+    margin-top: 12px;
+    margin-bottom: 2px;
+}
+
+#orgMotto {
+    color: #034f84;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 0px 3px 0px 10px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    height: 28px;
+    width: 100%;
+    padding: 1px 2px 2px 2px;
+    margin: 2px 2px 0px 2px;
+    background-color: #ff7f50;
+    color: #ff9;
+    font-weight: bold;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 3;
+}
+
+a {
+    text-decoration: none; /*Removes underline.*/
+  }
+
+/* unvisited link */
+nav a:link {
+    color: #ff9;
+}
+
+/* visited link */
+/*nav a: visited {*/
+    /*color: #034f84;*/
+/*}*/
+
+/* selected link */
+nav a: active {
+    color: #ff9;
+}
+
+/* mouse over link */
+nav:hover {
+    background: #66cdaa;
+    color: #ff9;
+}
+
+.tagline {
+    color: #034f84;
+    text-align: center;
+}
+
+#name {
+    font-size: 30px;
+    font-weight: bolder;
+    padding: 2px;
+    margin: 10px 10px 6px 10px;
+}
+
+.taglineText {
+    font-size: 20px;
+    font-weight: bold;
+    padding: 2px;
+    margin: 2px;
+}
+
+/*Styling for homepage gallery of photos & quotes.*/
+
+main {
+    width: 90vw;
+    margin: 0 auto;
+}
+
+.gallery-parent {
+    width: 90vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 10px auto;
+}
+
+figure {
+    width: 260px;
+    height: 220px;
+    padding: 10px;
+    border-color: #66cdaa;
+    border-style: solid;
+    border-radius: 15px;
+    margin: 8px;
+}
+
+.imageSize {
+    max-width: 200px;
+    max-height: 160px;
+}
+
+.landscape {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.portrait {
+    display: flex;
+    align-items: center;
+}
+
+.quote {
+    color: #034f84;
+    font-size: 13px;
+    font-weight: bold;
+    padding: 6px 0px 4px 8px;
+}
+
+.quoteFrom {
+    color: #034f84;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 4px 0px 0px 8px;
+}
+
+.italic {
+    font-style: italic;
+}
+
+footer {
+    font-size: 10px;
+    color: #034f84;
+    bottom: 0px;
+    position: static;
+}
+
+#footerNote1 {
+    padding: 2px 2px 0px 10px;
+    margin-bottom: 0px;
+}
+
+#footerNote2 {
+    padding: 0px 2px 10px 10px;
+    margin-top: 0px;
+}
+
+#scrollTop {
+    text-decoration: none; /*Removes underline from links*/
+    padding: 15px 13px;
+    position: fixed;
+    bottom: 5px;
+    right:5px;
+    z-index: 1;
+    text-align: center;
+    background-color: #ff7f50;
+    color: #034f84;
+    font-weight: 800;
+    border-radius: 7px;
+}
+
+/* MEDIA QUERIES*/
+
+@media only screen and (max-width: 700px){
+    
+.gallery-parent{
+    width: 500px;
+}
+    
+.gallery-parent figure{
+    width: 300px;
+    }
+}
+
+/* Styling for "List of Works": */
+
+.book-container {
+    width: 100%;
+    /*position: relative;*/
+    /*text-align: center;*/
+}
+
+.blankBook {
+    width: 100%;
+    background-image: url("...images/OpenBlankBook.jpg");
+    background-size: cover;
+    }
+
+.worksList-parent {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin: 2px auto;
+/*    following 4 lines of code overlay list of works to book image*/
+    position: absolute;
+    top: 26%;
+    left: 2%;
+    transform: translate(-2%, -2%);
+}
+
+#pageTitle {
+    font-size: 20px;
+    font-weight: bold;
+    color: #034f84;
+    text-align: center;
+    /*padding: 0px 2px 2px 2px;*/
+    margin: 0px 2px 4px 2px;
+}
+
+#pageByline {
+    font-size: 14px;
+    color: #034f84;
+    text-align: center;
+    /*padding: 0px 2px 2px 2px;*/
+    margin: 2px 2px 4px 2px;
+}
+
+.listofWorksHeading {
+    font-size: 16px;
+    font-weight: bold;
+    color: #034f84;
+    text-align: center;
+    /*padding: 6px 2px 0px 2px;*/
+    margin: 14px 2px 0px 2px;
+}
+
+.titleItalic {
+    font-size: 14px;
+    font-style: italic;
+    color: #034f84;
+    text-align: center;
+    /*padding: 0px 2px 0px 2px;*/
+    margin: 4px 20px 0px 2px;
+}
+
+
+/*Styling codes below are for List of Works page, Plan B, i.e., using table element.*/
+
+/*
+#subPageTitle {
+    font-size: 20px;
+    color: #034f84;
+    text-align: left;
+    padding: 0px;
+}
+
+#subPageByline {
+    font-size: 14px;
+    color: #034f84;
+    text-align: left;
+    padding: 0px;
+}
+
+table {
+    width: 760px;
+}
+
+.title {
+    font-style: italic;
+    font-size: 12px;
+    text-align: left;
+}
+
+th, td {
+    padding: 4px 10px 4px 10px;
+    border: 2px 100px 4px 100px;
+    }
+
+th {
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: 80%;
+    border-bottom: 3px solid #034f84;
+    border-top: 2px solid #034f84;
+    text-align: center;
+}
+*/
+/* alternate way of creating bands.  With this method, add to HTML <tr id="even">
+tr.even {
+  background-color: #ff9;  
+}
+*/
+
+/*
+tr:nth-child(even) {
+    background-color: #ffff99;
+}
+
+tr:hover {
+    background-color: #f7786b;
+}
+*/
+
+
+/* Styling for subpages: */
+
+/*Following 2 sets by Cira*/
+
+/*.blangkPage {*/
+/*    width: 100%;*/
+/*    height: 400px;*/
+/*    background-size: 100% 100%;*/
+/*    background-image: url("parchmentPaper.jpg");*/
+/*}*/
+
+/*.page-container {*/
+/*    position: relative;*/
+/*    text-align: left;*/
+/*    background-image: url("../images/parchmentPaper.jpg");*/
+/*    background-position: center;*/
+/*    background-size: cover;*/
+/*    background-repeat: no-repeat;*/
+/*    overflow: auto;*/
+/*}*/
+
+/*following 3 rows originally commented out*/
+
+/*.page-container {*/
+/*    display: flex;*/
+/*    width: 100%;*/
+/*}*/
+
+.blankPage {
+    width: 100%;
+    background-image: url("../images/parchmentPaper.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.subpageText-parent {
+    width: 90vw;
+    /*following 4 lines of code overlay text to blank page image*/
+    position: absolute;
+    top: 24%;
+    left: 10%;
+     bottom: 0px;
+    transform: translate(-5%, -5%);
+    overflow: auto;
+}
+
+.subpageTitle {
+    font-size: 20px;
+    font-weight: bold;
+    color: #034f84;
+    text-align: center;
+    margin: 4px 20px 10px 18px;
+}
+
+.subpageDescription {
+    font-size: 14px;
+    color: #034f84;
+    margin: 8px 20px 4px 18px;
+}
+
+/*
+Color Pallette:
+
+dusty navy blue
+#034f84
+
+cream
+#ffff99
+rgb (255,255,153)
+hsl (60,100%,80%)
+
+coral
+#ff7f50
+rgb (255,127,80)
+hsl (16,100%,66%)
+
+dusty mint
+#66cdaa
+rgb (102,205,170)
+hsl (160,51%,60%)
+
+*/
